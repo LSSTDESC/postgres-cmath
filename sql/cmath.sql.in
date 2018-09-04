@@ -1,0 +1,1180 @@
+CREATE OR REPLACE FUNCTION
+  c_fpclassify
+  ( IN  "x" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fpclassify'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_isfinite
+  ( IN  "x" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_isfinite'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_isinf
+  ( IN  "x" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_isinf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_isnan
+  ( IN  "x" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_isnan'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_isnormal
+  ( IN  "x" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_isnormal'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_signbit
+  ( IN  "x" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_signbit'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_acos
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_acos'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_acosf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_acosf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_asin
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_asin'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_asinf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_asinf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_atan
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_atan'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_atanf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_atanf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_atan2
+  ( IN  "y" Float8
+  , IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_atan2'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_atan2f
+  ( IN  "y" Float4
+  , IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_atan2f'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_cos
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_cos'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_cosf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_cosf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_sin
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_sin'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_sinf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_sinf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_tan
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_tan'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_tanf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_tanf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_acosh
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_acosh'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_acoshf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_acoshf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_asinh
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_asinh'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_asinhf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_asinhf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_atanh
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_atanh'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_atanhf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_atanhf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_cosh
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_cosh'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_coshf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_coshf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_sinh
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_sinh'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_sinhf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_sinhf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_tanh
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_tanh'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_tanhf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_tanhf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_exp
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_exp'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_expf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_expf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_exp2
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_exp2'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_exp2f
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_exp2f'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_expm1
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_expm1'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_expm1f
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_expm1f'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_frexp
+  ( IN  "value" Float8
+  , OUT "ret_value" Float8
+  , OUT "exp" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_frexp'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_frexpf
+  ( IN  "value" Float4
+  , OUT "ret_value" Float4
+  , OUT "exp" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_frexpf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_ilogb
+  ( IN  "x" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_ilogb'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_ilogbf
+  ( IN  "x" Float4
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_ilogbf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_ldexp
+  ( IN  "x" Float8
+  , IN  "exp" Int4
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_ldexp'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_ldexpf
+  ( IN  "x" Float4
+  , IN  "exp" Int4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_ldexpf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_log
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_log'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_logf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_logf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_log10
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_log10'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_log10f
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_log10f'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_log1p
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_log1p'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_log1pf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_log1pf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_log2
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_log2'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_log2f
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_log2f'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_logb
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_logb'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_logbf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_logbf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_modf
+  ( IN  "value" Float8
+  , OUT "ret_value" Float8
+  , OUT "iptr" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_modf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_modff
+  ( IN  "value" Float4
+  , OUT "ret_value" Float4
+  , OUT "iptr" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_modff'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_scalbn
+  ( IN  "x" Float8
+  , IN  "n" Int4
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_scalbn'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_scalbnf
+  ( IN  "x" Float4
+  , IN  "n" Int4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_scalbnf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_scalbln
+  ( IN  "x" Float8
+  , IN  "n" Int8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_scalbln'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_scalblnf
+  ( IN  "x" Float4
+  , IN  "n" Int8
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_scalblnf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_cbrt
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_cbrt'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_cbrtf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_cbrtf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fabs
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fabs'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fabsf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fabsf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_hypot
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_hypot'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_hypotf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_hypotf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_pow
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_pow'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_powf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_powf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_sqrt
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_sqrt'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_sqrtf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_sqrtf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_erf
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_erf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_erff
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_erff'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_erfc
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_erfc'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_erfcf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_erfcf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_lgamma
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_lgamma'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_lgammaf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_lgammaf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_tgamma
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_tgamma'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_tgammaf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_tgammaf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_ceil
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_ceil'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_ceilf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_ceilf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_floor
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_floor'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_floorf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_floorf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_nearbyint
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_nearbyint'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_nearbyintf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_nearbyintf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_rint
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_rint'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_rintf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_rintf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_lrint
+  ( IN  "x" Float8
+  , OUT "ret_value" Int8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_lrint'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_lrintf
+  ( IN  "x" Float4
+  , OUT "ret_value" Int8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_lrintf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_llrint
+  ( IN  "x" Float8
+  , OUT "ret_value" Int8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_llrint'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_llrintf
+  ( IN  "x" Float4
+  , OUT "ret_value" Int8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_llrintf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_round
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_round'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_roundf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_roundf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_lround
+  ( IN  "x" Float8
+  , OUT "ret_value" Int8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_lround'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_lroundf
+  ( IN  "x" Float4
+  , OUT "ret_value" Int8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_lroundf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_llround
+  ( IN  "x" Float8
+  , OUT "ret_value" Int8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_llround'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_llroundf
+  ( IN  "x" Float4
+  , OUT "ret_value" Int8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_llroundf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_trunc
+  ( IN  "x" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_trunc'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_truncf
+  ( IN  "x" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_truncf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fmod
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fmod'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fmodf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fmodf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_remainder
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_remainder'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_remainderf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_remainderf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_remquo
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  , OUT "quo" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_remquo'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_remquof
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  , OUT "quo" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_remquof'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_copysign
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_copysign'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_copysignf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_copysignf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_nan
+  ( IN  "tagp" CString
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_nan'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_nanf
+  ( IN  "tagp" CString
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_nanf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_nextafter
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_nextafter'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_nextafterf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_nextafterf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_nexttoward
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_nexttoward'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_nexttowardf
+  ( IN  "x" Float4
+  , IN  "y" Float8
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_nexttowardf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fdim
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fdim'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fdimf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fdimf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fmax
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fmax'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fmaxf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fmaxf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fmin
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fmin'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fminf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fminf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fma
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , IN  "z" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fma'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_fmaf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , IN  "z" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_fmaf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_isgreater
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_isgreater'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_isgreaterequal
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_isgreaterequal'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_isless
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_isless'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_islessequal
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_islessequal'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_islessgreater
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_islessgreater'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_isunordered
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Int4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_isunordered'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+

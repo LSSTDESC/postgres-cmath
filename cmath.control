@@ -1,0 +1,4 @@
+comment = 'C11 math functions'
+default_version = '1.2'
+module_pathname = '$libdir/cmath'
+relocatable = true

@@ -1,0 +1,44 @@
+CREATE OR REPLACE FUNCTION
+  c_float
+  ( IN  "x" Float8
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_float'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+
+CREATE OR REPLACE FUNCTION
+  c_multiply
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_multiply'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+CREATE OR REPLACE FUNCTION
+  c_multiplyf
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_multiplyf'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+CREATE OR REPLACE FUNCTION
+  c_divide
+  ( IN  "x" Float8
+  , IN  "y" Float8
+  , OUT "ret_value" Float8
+  )
+  AS 'MODULE_PATHNAME', 'cmath_divide'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
+
+CREATE OR REPLACE FUNCTION
+  c_dividef
+  ( IN  "x" Float4
+  , IN  "y" Float4
+  , OUT "ret_value" Float4
+  )
+  AS 'MODULE_PATHNAME', 'cmath_dividef'
+  LANGUAGE C STRICT IMMUTABLE PARALLEL SAFE;
